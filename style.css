@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --dark-color: #070510;
+    --dark-purple: #2E2050;
+    --light-pink: #C49CD6;
+    --purple-pink: #674A86;
+    --quite-dark-pink: #8766AE;
+    --very-light-green: #D4FAD1;
+
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: var(--very-light-green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+body {
+    color: #333;
+    background-color: var(--bg-color);
+    
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+    .nav-links .links{
+        margin: 0 20px;
+        padding: 10px;
+        border-radius: 7px;
+        transition: background-color ease-in-out .3s;
+    }
+    .nav-links .links:hover{
+        color: var(--text-color);
+        background-color: var(--main-color);
+    }
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 3s linear infinite;
+}
+    .circle .records{
+        scale: .15;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            /* Start position */
+        }
+
+        to {
+            transform: rotate(360deg);
+            /* End position */
+        }
+    }
+
+@media (max-width: 600px){
+    .circle{
+        display: none;
+    }
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    max-width: 600px;
+    
+}
+    .home-content h1{
+        color: var(--text-color);
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .home-content h3{
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .home-content p{
+        color: var(--text-color);
+        font-size: 14px;
+        margin: 20px 0 40px;
+    }
+    .home-content .btn-box{
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height: 50px;
+        /* background-color: yellowgreen; */
+    }
+    .btn-box a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background-color: var(--main-color);
+        border: 2px solid var(--main-color);
+        border-radius: 7px;
+        color: var(--bg-color);
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .btn-box a:hover{
+        color: var(--main-color);
+    }
+    .btn-box a:nth-child(2){
+        background-color: transparent;
+        color: var(--main-color);
+    }
+    .btn-box a:nth-child(2):hover{
+        color: var(--bg-color);
+    }
+    .btn-box a:nth-child(2)::before{
+        background: var(--main-color);
+    }
+    .btn-box a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    .btn-box a:hover::before{
+        width: 100%;
+    }
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+    .home-sci a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background: transparent;
+        border: 2px solid var(--main-color);
+        border-radius: 50%;
+        font-size: 20px;
+        color: var(--main-color);
+        z-index: 1;
+        overflow: hidden;
+    }
+    .home-sci a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--second-bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    .home-sci a:hover::before{
+        width: 100%;
+    }
