@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header style="z-index: 10;">
         <nav class="navbar" style="
                 display: flex;
                 justify-content: space-between;
@@ -24,8 +24,13 @@
                 background-color: #112e42;
                 padding: 10px 90px;
             ">
-            <div class="circle">
-                <img class="records" src="/assets/img/records.png" alt="">
+            <div style="display: inline-flex; align-items: center; justify-content: space-between; width: 130px;">
+                <div class="circle">
+                    <img class="records" src="/assets/img/records.png" alt="">
+                </div>
+                <div class="logo">
+                    <a href="#">Melody.</a>
+                </div>
             </div>
             <ul class="nav-links">
                 <li class="links"><a href="#home">Home</a></li>
@@ -55,6 +60,8 @@
             <a href="#"><i class="bx bxl-tiktok"></i></a>
             <a href="#"><i class="bx bxl-instagram"></i></a>
         </div>
+
+        <span class="home-imgHover"></span>
     </section>
     <!-- <div class="topic" style="
         position: absolute;
